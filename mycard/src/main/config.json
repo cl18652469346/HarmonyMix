@@ -1,0 +1,66 @@
+{
+  "app": {
+    "bundleName": "com.hoperun.harmonyMix",
+    "vendor": "hoperun",
+    "version": {
+      "code": 1,
+      "name": "1.0"
+    },
+    "apiVersion": {
+      "target": 5,
+      "compatible": 5,
+      "releaseType": "Release"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.hoperun.mycard",
+    "name": ".MyApplication",
+    "mainAbility": "com.hoperun.mycard.CardAbility",
+    "deviceType": [
+      "phone",
+      "tablet"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "mycard",
+      "moduleType": "feature",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "orientation": "unspecified",
+        "visible": true,
+        "name": "com.hoperun.mycard.CardAbility",
+        "icon": "$media:icon",
+        "description": "$string:cardability_description",
+        "formsEnabled": true,
+        "label": "$string:mycard_CardAbility",
+        "type": "page",
+        "forms": [
+          {
+            "landscapeLayouts": [
+              "$layout:form_image_with_information_widget_2_2"
+            ],
+            "isDefault": true,
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "2*2",
+            "name": "widget",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "Java",
+            "supportDimensions": [
+              "2*2"
+            ],
+            "portraitLayouts": [
+              "$layout:form_image_with_information_widget_2_2"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          }
+        ],
+        "launchType": "standard"
+      }
+    ]
+  }
+}

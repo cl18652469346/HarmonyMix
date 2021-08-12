@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "mycard_CardAbility",
+      "value": "mycard_CardAbility"
+    },
+    {
+      "name": "cardability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "cardability_HelloWorld",
+      "value": "Hello World"
+    }
+  ]
+}
