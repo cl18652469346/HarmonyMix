@@ -4,41 +4,32 @@
     ohos:height="match_parent"
     ohos:width="match_parent"
     ohos:background_element="#FFFFFFFF"
+    ohos:orientation="vertical"
+    ohos:padding="10vp"
     ohos:remote="true">
 
-    <Image
-        ohos:height="match_parent"
-        ohos:width="126vp"
-        ohos:horizontal_center="true"
-        ohos:image_src="$media:form_image_with_information_widget_default_image_2"
-        ohos:scale_mode="zoom_start"
-        ohos:top_margin="17vp"/>
-
-    <DirectionalLayout
+    <Text
+        ohos:id="$+id:question"
         ohos:height="match_content"
-        ohos:width="126vp"
+        ohos:width="match_parent"
+        ohos:hint="什么东西越洗越脏?"
+        ohos:max_text_lines="6"
+        ohos:multiple_lines="true"
+        ohos:text_color="#E5000000"
+        ohos:text_size="16fp"
+        ohos:text_weight="500"
+        ohos:truncation_mode="ellipsis_at_end"/>
+
+    <Text
+        ohos:id="$+id:result"
+        ohos:height="match_content"
+        ohos:width="match_parent"
         ohos:align_parent_bottom="true"
-        ohos:bottom_margin="12vp"
-        ohos:horizontal_center="true"
-        ohos:orientation="vertical">
-
-        <Text
-            ohos:height="match_content"
-            ohos:width="match_parent"
-            ohos:text="$string:widget_title"
-            ohos:text_color="#E5000000"
-            ohos:text_size="16fp"
-            ohos:text_weight="500"
-            ohos:truncation_mode="ellipsis_at_end"/>
-
-        <Text
-            ohos:height="match_content"
-            ohos:width="match_parent"
-            ohos:text="$string:widget_introduction"
-            ohos:text_color="#99000000"
-            ohos:text_size="12fp"
-            ohos:text_weight="400"
-            ohos:top_margin="2vp"
-            ohos:truncation_mode="ellipsis_at_end"/>
-    </DirectionalLayout>
+        ohos:bottom_margin="10vp"
+        ohos:hint="水"
+        ohos:max_text_lines="2"
+        ohos:multiple_lines="true"
+        ohos:text_color="#9947C357"
+        ohos:text_size="14fp"
+        ohos:truncation_mode="ellipsis_at_end"/>
 </DependentLayout>

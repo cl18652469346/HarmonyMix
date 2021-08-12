@@ -65,6 +65,16 @@
           }
         ],
         "launchType": "standard"
+      },
+      {
+        "visible": true,
+        "backgroundModes": [
+          "dataTransfer"
+        ],
+        "name": "com.hoperun.mycard.CardService",
+        "icon": "$media:icon",
+        "description": "$string:cardservice_description",
+        "type": "service"
       }
     ]
   }

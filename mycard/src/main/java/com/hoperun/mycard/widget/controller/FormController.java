@@ -1,5 +1,6 @@
 package com.hoperun.mycard.widget.controller;
 
+import com.hoperun.mycard.Kid;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.ProviderFormInfo;
 import ohos.aafwk.content.Intent;
@@ -43,7 +44,7 @@ public abstract class FormController {
      * @param formId the id of service widget to be updated
      * @param vars   the data to update for service widget, this parameter is optional
      */
-    public abstract void updateFormData(long formId, Object... vars);
+    public abstract void updateFormData(long formId, Context context, Kid kid);
 
     /**
      * Called when receive service widget message event

@@ -23,6 +23,10 @@
     {
       "name": "widget_introduction",
       "value": "Introduction"
+    },
+    {
+      "name": "cardservice_description",
+      "value": "hap sample empty service"
     }
   ]
 }

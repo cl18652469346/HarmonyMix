@@ -7,6 +7,7 @@ import com.hoperun.mycard.widget.controller.FormController;
 import com.hoperun.mycard.widget.controller.FormControllerManager;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.ProviderFormInfo;
+import ohos.bundle.ElementName;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 
@@ -31,6 +32,7 @@ public class CardAbility extends Ability {
 
     @Override
     protected ProviderFormInfo onCreateForm(Intent intent) {
+        startService();
         HiLog.info(TAG, "onCreateForm");
         long formId = intent.getLongParam(AbilitySlice.PARAM_FORM_IDENTITY_KEY, INVALID_FORM_ID);
         String formName = intent.getStringParam(AbilitySlice.PARAM_FORM_NAME_KEY);
@@ -51,9 +53,9 @@ public class CardAbility extends Ability {
     protected void onUpdateForm(long formId) {
         HiLog.info(TAG, "onUpdateForm");
         super.onUpdateForm(formId);
-        FormControllerManager formControllerManager = FormControllerManager.getInstance(this);
-        FormController formController = formControllerManager.getController(formId);
-        formController.updateFormData(formId);
+//        FormControllerManager formControllerManager = FormControllerManager.getInstance(this);
+//        FormController formController = formControllerManager.getController(formId);
+//        formController.updateFormData(formId, this, new Kid());
     }
 
     @Override
@@ -104,5 +106,15 @@ public class CardAbility extends Ability {
             return null;
         }
         return clazz.getName();
+    }
+
+    private void startService() {
+        Intent intent = new Intent();
+        intent.setElement(new ElementName(
+                "",
+                getBundleName(),
+                "com.hoperun.mycard.CardService"
+        ));
+        startAbility(intent);
     }
 }
