@@ -23,6 +23,15 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
     testImplementation 'junit:junit:4.13'
     ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.200'
+
+    api 'com.squareup.okhttp3:okhttp:3.14.4'
+    api 'com.squareup.okhttp3:logging-interceptor:3.14.4'
+    api 'com.squareup.retrofit2:retrofit:2.5.0'
+    api 'com.squareup.retrofit2:adapter-rxjava:2.5.0'
+    api 'com.squareup.retrofit2:converter-gson:2.5.0'
+    api 'io.reactivex.rxjava3:rxjava:3.0.6'
+    api 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    api 'com.google.code.gson:gson:2.8.5'
 }
 decc {
     supportType = ['html','xml']

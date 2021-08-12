@@ -5,13 +5,13 @@ apply plugin: 'com.huawei.ohos.app'
 ohos {
     signingConfigs {
         debug {
-            storeFile file('D:\\Work\\HM\\DevEcoStudioProjects\\HarmonyMix\\harmonymix.p12')
-            storePassword '0000001D38BEC57EC346431F5AC1FFC49F4BB17852EBDCFF46A05342AA7497AED124049E9046C6712E8616A303'
+            storeFile file('D:\\Work\\HM\\DevEcoStudioProjects\\HarmonyMix\\HarmonyMix\\harmonymix.p12')
+            storePassword '0000001DECFF6BCD2DFB037F04A3654D79DEA2A2136AF4524F867A74B6C2EC84438BC9E40994F189DEE837DC6C'
             keyAlias = 'key0'
-            keyPassword '0000001DD1EE72BCBE9C6A7954241E5D93ECE2056D138D9F984ECE491EBAD77AB55A62144657B63D9EFF0CF91A'
+            keyPassword '0000001DA04EA9D66416706A391E07C0B76E7608F65B04E66A0653C627ADE77E275269FD2CF41BE0ACF776AE0F'
             signAlg = 'SHA256withECDSA'
-            profile file('D:\\Work\\HM\\DevEcoStudioProjects\\HarmonyMix\\harmonymixDebug.p7b')
-            certpath file('D:\\Work\\HM\\DevEcoStudioProjects\\HarmonyMix\\HarmonyMix.cer')
+            profile file('D:\\Work\\HM\\DevEcoStudioProjects\\HarmonyMix\\HarmonyMix\\harmonymixDebug.p7b')
+            certpath file('D:\\Work\\HM\\DevEcoStudioProjects\\HarmonyMix\\HarmonyMix\\HarmonyMix.cer')
         }
     }
     compileSdkVersion 5
