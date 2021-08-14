@@ -1,5 +1,4 @@
 # HarmonyMix
-签名密码也在文章中。
 安卓应用如何混合打包拥有鸿蒙特性？: https://developer.huawei.com/consumer/cn/blog/topic/03637432111020021
 基于Java的脑筋急转弯服务卡片: 
 
