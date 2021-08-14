@@ -14,7 +14,7 @@ import ohos.hiviewdfx.HiLogLabel;
 public class CardAbility extends Ability {
     public static final int DEFAULT_DIMENSION_2X2 = 2;
     private static final int INVALID_FORM_ID = -1;
-    private static final HiLogLabel TAG = new HiLogLabel(HiLog.DEBUG, 0x0, CardAbility.class.getName());
+    private static final String TAG = "CardService";
     private String topWidgetSlice;
 
     @Override
@@ -33,17 +33,17 @@ public class CardAbility extends Ability {
     @Override
     protected ProviderFormInfo onCreateForm(Intent intent) {
         startService();
-        HiLog.info(TAG, "onCreateForm");
+        LogUtils.error(TAG, "onCreateForm");
         long formId = intent.getLongParam(AbilitySlice.PARAM_FORM_IDENTITY_KEY, INVALID_FORM_ID);
         String formName = intent.getStringParam(AbilitySlice.PARAM_FORM_NAME_KEY);
         int dimension = intent.getIntParam(AbilitySlice.PARAM_FORM_DIMENSION_KEY, DEFAULT_DIMENSION_2X2);
-        HiLog.info(TAG, "onCreateForm: formId=" + formId + ",formName=" + formName);
+        LogUtils.error(TAG, "onCreateForm: formId=" + formId + ",formName=" + formName);
         FormControllerManager formControllerManager = FormControllerManager.getInstance(this);
         FormController formController = formControllerManager.getController(formId);
         formController = (formController == null) ? formControllerManager.createFormController(formId,
                 formName, dimension) : formController;
         if (formController == null) {
-            HiLog.error(TAG, "Get null controller. formId: " + formId + ", formName: " + formName);
+            LogUtils.error(TAG, "Get null controller. formId: " + formId + ", formName: " + formName);
             return null;
         }
         return formController.bindFormData();
@@ -51,7 +51,7 @@ public class CardAbility extends Ability {
 
     @Override
     protected void onUpdateForm(long formId) {
-        HiLog.info(TAG, "onUpdateForm");
+        LogUtils.error(TAG, "onUpdateForm");
         super.onUpdateForm(formId);
 //        FormControllerManager formControllerManager = FormControllerManager.getInstance(this);
 //        FormController formController = formControllerManager.getController(formId);
@@ -60,7 +60,7 @@ public class CardAbility extends Ability {
 
     @Override
     protected void onDeleteForm(long formId) {
-        HiLog.info(TAG, "onDeleteForm: formId=" + formId);
+        LogUtils.error(TAG, "onDeleteForm: formId=" + formId);
         super.onDeleteForm(formId);
         FormControllerManager formControllerManager = FormControllerManager.getInstance(this);
         formControllerManager.deleteFormController(formId);
@@ -68,7 +68,7 @@ public class CardAbility extends Ability {
 
     @Override
     protected void onTriggerFormEvent(long formId, String message) {
-        HiLog.info(TAG, "onTriggerFormEvent: " + message);
+        LogUtils.error(TAG, "onTriggerFormEvent: " + message);
         super.onTriggerFormEvent(formId, message);
         FormControllerManager formControllerManager = FormControllerManager.getInstance(this);
         FormController formController = formControllerManager.getController(formId);

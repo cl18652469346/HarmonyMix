@@ -12,24 +12,40 @@
         ohos:id="$+id:question"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:hint="什么东西越洗越脏?"
-        ohos:max_text_lines="6"
+        ohos:hint="什么东西越洗越脏?什么东西越洗越脏?什么东西越洗越脏?什么东西越洗越脏?什么东西越洗越脏?什么东西越洗越脏?"
+        ohos:max_text_lines="5"
         ohos:multiple_lines="true"
         ohos:text_color="#E5000000"
-        ohos:text_size="16fp"
-        ohos:text_weight="500"
+        ohos:text_size="14fp"
         ohos:truncation_mode="ellipsis_at_end"/>
 
-    <Text
-        ohos:id="$+id:result"
+    <DirectionalLayout
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:align_parent_bottom="true"
-        ohos:bottom_margin="10vp"
-        ohos:hint="水"
-        ohos:max_text_lines="2"
-        ohos:multiple_lines="true"
-        ohos:text_color="#9947C357"
-        ohos:text_size="14fp"
-        ohos:truncation_mode="ellipsis_at_end"/>
+        ohos:orientation="horizontal">
+
+        <Text
+            ohos:id="$+id:result"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:hint="水水水水水水水水水水水水水水水"
+            ohos:layout_alignment="vertical_center"
+            ohos:max_text_lines="2"
+            ohos:multiple_lines="true"
+            ohos:text_color="#E56D0D0D"
+            ohos:text_size="14fp"
+            ohos:truncation_mode="ellipsis_at_end"
+            ohos:vertical_center="true"
+            ohos:weight="1"/>
+
+        <Image
+            ohos:id="$+id:refresh"
+            ohos:height="30vp"
+            ohos:width="30vp"
+            ohos:image_src="$media:refresh"
+            ohos:layout_alignment="vertical_center"
+            ohos:scale_mode="stretch"/>
+    </DirectionalLayout>
+
 </DependentLayout>

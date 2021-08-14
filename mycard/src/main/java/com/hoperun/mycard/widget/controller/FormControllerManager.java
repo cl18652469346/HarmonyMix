@@ -1,5 +1,6 @@
 package com.hoperun.mycard.widget.controller;
 
+import com.hoperun.mycard.LogUtils;
 import ohos.app.Context;
 import ohos.data.DatabaseHelper;
 import ohos.data.preferences.Preferences;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
  * Form controller manager.
  */
 public class FormControllerManager {
-    private static final HiLogLabel TAG = new HiLogLabel(HiLog.DEBUG, 0x0, FormControllerManager.class.getName());
+    private static final String TAG = "CardService";
     private static final String PACKAGE_PATH = "com.hoperun.mycard.widget";
     private static final String SHARED_SP_NAME = "form_info_sp.xml";
     private static final String FORM_NAME = "formName";
@@ -67,11 +68,11 @@ public class FormControllerManager {
      * @return FormController form controller
      */
     public FormController createFormController(long formId, String formName, int dimension) {
-        synchronized (controllerHashMap) {
+//        synchronized (controllerHashMap) {
             if (formId < 0 || formName.isEmpty()) {
                 return null;
             }
-            HiLog.info(TAG,
+        LogUtils.error(TAG,
                     "saveFormId() formId: " + formId + ", formName: " + formName + ", preferences: " + preferences);
             if (preferences != null) {
                 ZSONObject formObj = new ZSONObject();
@@ -92,7 +93,7 @@ public class FormControllerManager {
             }
 
             return controller;
-        }
+//        }
     }
 
     /**
@@ -102,7 +103,7 @@ public class FormControllerManager {
      * @return the instance of form controller.
      */
     public FormController getController(long formId) {
-        synchronized (controllerHashMap) {
+//        synchronized (controllerHashMap) {
             if (controllerHashMap.containsKey(formId)) {
                 return controllerHashMap.get(formId);
             }
@@ -116,13 +117,13 @@ public class FormControllerManager {
                 controllerHashMap.put(formId, controller);
             }
             return controllerHashMap.get(formId);
-        }
+//        }
     }
 
     private FormController newInstance(String formName, int dimension, Context context) {
         FormController ctrInstance = null;
         if (formName == null || formName.isEmpty()) {
-            HiLog.error(TAG, "newInstance() get empty form name");
+            LogUtils.error(TAG, "newInstance() get empty form name");
             return ctrInstance;
         }
         try {
@@ -138,7 +139,7 @@ public class FormControllerManager {
             }
         } catch (NoSuchMethodException | InstantiationException | IllegalArgumentException | InvocationTargetException
                 | IllegalAccessException | ClassNotFoundException | SecurityException exception) {
-            HiLog.error(TAG, "newInstance() get exception: " + exception.getMessage());
+            LogUtils.error(TAG, "newInstance() get exception: " + exception.getMessage());
         }
         return ctrInstance;
     }

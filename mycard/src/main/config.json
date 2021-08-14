@@ -17,6 +17,9 @@
     "reqPermissions": [
       {
         "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.KEEP_BACKGROUND_RUNNING"
       }
     ],
     "package": "com.hoperun.mycard",
@@ -69,7 +72,8 @@
       {
         "visible": true,
         "backgroundModes": [
-          "dataTransfer"
+          "dataTransfer",
+          "location"
         ],
         "name": "com.hoperun.mycard.CardService",
         "icon": "$media:icon",

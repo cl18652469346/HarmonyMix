@@ -44,7 +44,7 @@ public abstract class FormController {
      * @param formId the id of service widget to be updated
      * @param vars   the data to update for service widget, this parameter is optional
      */
-    public abstract void updateFormData(long formId, Context context, Kid kid);
+    public abstract void updateFormData(long formId, Kid kid);
 
     /**
      * Called when receive service widget message event
