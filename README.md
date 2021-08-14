@@ -1,6 +1,6 @@
 # HarmonyMix
 安卓应用如何混合打包拥有鸿蒙特性？: https://developer.huawei.com/consumer/cn/blog/topic/03637432111020021
-基于Java的脑筋急转弯服务卡片: 
+基于Java的脑筋急转弯服务卡片: https://developer.huawei.com/consumer/cn/forum/topic/0201643417383460227?fid=0101303901040230869 （审核中）
 
 Contants.API_KEY https://www.tianapi.com/ 中申请账号后可得到，自行申请去吧，免费接口每天可以使用100次。
 
