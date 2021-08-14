@@ -10,4 +10,5 @@ Contants.API_KEY https://www.tianapi.com/ 中申请账号后可得到，自行�
    后者会变成时间的更新（自动、主动）
    
    
+   内容: 自动更新后，主动点击更新。
    ![CardRefresh](https://user-images.githubusercontent.com/32134764/129433151-36ba5fe1-c9ad-4ca8-adf3-6e3c1a2110ec.gif)
